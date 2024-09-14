@@ -9,8 +9,24 @@
 <body>	
 	<script>
 		function secondHighest(arr) {
-			//Write your code here
-			
+			let max = -Infinity
+			let secMax = -Infinity
+			if(arr.length < 2){
+				return -Infinity
+			}
+			for(let i = 1; i< arr.length; i++){
+				
+				
+				if(arr[i] > max){
+					secMax = max
+					max = arr[i]
+				}
+			else if(arr[i] > secMax && secMax < max){
+						secMax  = arr[i]
+					}
+				
+     	   }
+		  return secMax === -Infinity? -Infinity:secMax
 		}
 
 		function Main() {
